@@ -73,11 +73,11 @@
     <distributionManagement>
         <snapshotRepository>
             <id>private</id>
-            <url>http://139.198.9.251:31571/content/repositories/snapshots/</url>
+            <url>http://139.198.9.251:31571/repository/maven-snapshots//</url>
         </snapshotRepository>
         <repository>
             <id>private</id>
-            <url>http://139.198.9.251:31571/service/local/staging/deploy/maven2/</url>
+            <url>http://139.198.9.251:31571/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
 
@@ -337,17 +337,17 @@
             <distributionManagement>
                 <snapshotRepository>
                     <!-- 这里的id和settings.xml中刚才配置的server中的id一致即可 -->
-                    <id>oss</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                    <id>private</id>
+                    <url>http://139.198.9.251:31571/repository/maven-snapshots/</url>
                 </snapshotRepository>
                 <repository>
                     <!-- 这里的id和settings.xml中刚才配置的server中的id一致即可 -->
-                    <id>oss</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                    <id>private</id>
+                    <url>http://139.198.9.251:31571/repository/maven-releases/</url>
                 </repository>
             </distributionManagement>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
         </profile>
     </profiles>
