@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.zuihou</groupId>
     <artifactId>zuihou-dependencies</artifactId>
-    <version>2.7.0</version>
+    <version>2.7.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
     <description>Spring Boot 2.x项目依赖管理</description>
@@ -100,12 +100,12 @@
 
     <distributionManagement>
         <snapshotRepository>
-            <id>oss</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <id>private</id>
+            <url>http://139.198.9.251:31571/repository/maven-snapshots//</url>
         </snapshotRepository>
         <repository>
-            <id>oss</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>private</id>
+            <url>http://139.198.9.251:31571/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
 
@@ -542,7 +542,7 @@
         </repository>
         <repository>
             <id>oss-public</id>
-            <url>https://oss.sonatype.org/content/repositories/public</url>
+            <url>http://139.198.9.251:31571/content/repositories/public</url>
         </repository>
     </repositories>
     <pluginRepositories>
@@ -601,17 +601,17 @@
             <distributionManagement>
                 <snapshotRepository>
                     <!-- 这里的id和settings.xml中刚才配置的server中的id一致即可 -->
-                    <id>oss</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                    <id>private</id>
+                    <url>http://139.198.9.251:31571/repository/maven-snapshots/</url>
                 </snapshotRepository>
                 <repository>
                     <!-- 这里的id和settings.xml中刚才配置的server中的id一致即可 -->
-                    <id>oss</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                    <id>private</id>
+                    <url>http://139.198.9.251:31571/repository/maven-releases/</url>
                 </repository>
             </distributionManagement>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
         </profile>
     </profiles>
